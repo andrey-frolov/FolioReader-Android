@@ -4,9 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="101dp"
+    android:layout_height="152dp"
     tools:layout_gravity="bottom">
     
+    <com.folioreader.ui.view.StyleableTextView
+        android:id="@+id/view_config_font_andada"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="@string/andada"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toStartOf="@+id/view_config_font_lato"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.folioreader.ui.view.StyleableTextView
+        android:id="@+id/view_config_font_lato"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="@string/lato"
+        android:textSize="17sp"
+        app:folio_font="@string/lato_font"
+        app:layout_constraintEnd_toStartOf="@+id/view_config_font_lora"
+        app:layout_constraintStart_toEndOf="@+id/view_config_font_andada" />
+
+    <com.folioreader.ui.view.StyleableTextView
+        android:id="@+id/view_config_font_lora"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="@string/lora"
+        android:textSize="17sp"
+        app:folio_font="@string/lora_font"
+        app:layout_constraintEnd_toStartOf="@+id/view_config_font_raleway"
+        app:layout_constraintStart_toEndOf="@+id/view_config_font_lato" />
+
+    <com.folioreader.ui.view.StyleableTextView
+        android:id="@+id/view_config_font_raleway"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="@string/raleway"
+        android:textSize="17sp"
+        app:folio_font="@string/raleway_font"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view_config_font_lora" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/grey_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_config_font_lato" />
+
     <ImageView
         android:id="@+id/view_config_iv_label_font_small"
         android:layout_width="36dp"
@@ -17,7 +69,8 @@
         android:tint="@color/grey_color"
         app:layout_constraintBottom_toTopOf="@+id/view5"
         app:layout_constraintEnd_toStartOf="@+id/view_config_font_size_seek_bar"
-        app:layout_constraintStart_toStartOf="parent"        
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view4"
         app:srcCompat="@drawable/ic_format_font_black_24dp" />
 
     <ImageView
@@ -31,6 +84,7 @@
         app:layout_constraintBottom_toTopOf="@+id/view5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/view_config_font_size_seek_bar"
+        app:layout_constraintTop_toBottomOf="@+id/view4"
         app:srcCompat="@drawable/ic_format_font_black_36dp" />
 
     <SeekBar
@@ -38,9 +92,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:max="4"
-        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/view5"
         app:layout_constraintEnd_toStartOf="@+id/view_config_iv_label_font_big"
-        app:layout_constraintStart_toEndOf="@+id/view_config_iv_label_font_small" />
+        app:layout_constraintStart_toEndOf="@+id/view_config_iv_label_font_small"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
 
     <View
         android:id="@+id/view5"
