@@ -84,15 +84,15 @@ class ConfigBottomSheetDialogFragment : BottomSheetDialogFragment() {
         }
 
         if (isNightMode) {
-            view_config_ib_day_mode.isSelected = false
+            /*view_config_ib_day_mode.isSelected = false
             view_config_ib_night_mode.isSelected = true
             UiUtil.setColorIntToDrawable(config.themeColor, view_config_ib_night_mode.drawable)
-            UiUtil.setColorResToDrawable(R.color.app_gray, view_config_ib_day_mode.drawable)
+            UiUtil.setColorResToDrawable(R.color.app_gray, view_config_ib_day_mode.drawable) */
         } else {
-            view_config_ib_day_mode.isSelected = true
+            /*view_config_ib_day_mode.isSelected = true
             view_config_ib_night_mode.isSelected = false
             UiUtil.setColorIntToDrawable(config.themeColor, view_config_ib_day_mode!!.drawable)
-            UiUtil.setColorResToDrawable(R.color.app_gray, view_config_ib_night_mode.drawable)
+            UiUtil.setColorResToDrawable(R.color.app_gray, view_config_ib_night_mode.drawable)*/
         }
     }
 
@@ -104,7 +104,7 @@ class ConfigBottomSheetDialogFragment : BottomSheetDialogFragment() {
             buttonHorizontal.visibility = View.GONE
         }
 
-        view_config_ib_day_mode.setOnClickListener {
+        /*view_config_ib_day_mode.setOnClickListener {
             isNightMode = true
             toggleBlackTheme()
             view_config_ib_day_mode.isSelected = true
@@ -113,9 +113,9 @@ class ConfigBottomSheetDialogFragment : BottomSheetDialogFragment() {
             setAudioPlayerBackground()
             UiUtil.setColorResToDrawable(R.color.app_gray, view_config_ib_night_mode.drawable)
             UiUtil.setColorIntToDrawable(config.themeColor, view_config_ib_day_mode.drawable)
-        }
+        }*/
 
-        view_config_ib_night_mode.setOnClickListener {
+        /*view_config_ib_night_mode.setOnClickListener {
             isNightMode = false
             toggleBlackTheme()
             view_config_ib_day_mode.isSelected = false
@@ -124,7 +124,7 @@ class ConfigBottomSheetDialogFragment : BottomSheetDialogFragment() {
             UiUtil.setColorIntToDrawable(config.themeColor, view_config_ib_night_mode.drawable)
             setToolBarColor()
             setAudioPlayerBackground()
-        }
+        }*/
 
         if (activityCallback.direction == Config.Direction.HORIZONTAL) {
             buttonHorizontal.isSelected = true
