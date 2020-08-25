@@ -41,5 +41,7 @@
     <string name="save_note">Сохранить заметку</string>
     <string name="please_enter_note">пожалуйста введите заметку</string>
     <string name="contents">Содержание</string>
-
+    <string name="search_hint">Поиск по книге</string>
+    <string name="search_empty_text">Нет результатов</string>
+    <string name="search_failure_text">Ошибка во время поиска</string>
 </resources>
