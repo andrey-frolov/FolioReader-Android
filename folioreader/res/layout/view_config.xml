@@ -15,7 +15,7 @@
         android:text="@string/andada"
         android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/view_config_font_lato"
-        app:layout_constraintStart_toStartOf="parent />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.folioreader.ui.view.StyleableTextView
         android:id="@+id/view_config_font_lato"
