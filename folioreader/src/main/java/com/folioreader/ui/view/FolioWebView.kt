@@ -296,14 +296,14 @@ class FolioWebView : WebView {
             dismissPopupWindow()
             loadUrl("javascript:onTextSelectionItemClicked(${it.id})")
         }
-        viewTextSelection.shareSelection.setOnClickListener {
+        /*viewTextSelection.shareSelection.setOnClickListener {
             dismissPopupWindow()
             loadUrl("javascript:onTextSelectionItemClicked(${it.id})")
         }
         viewTextSelection.defineSelection.setOnClickListener {
             dismissPopupWindow()
             loadUrl("javascript:onTextSelectionItemClicked(${it.id})")
-        }
+        }*/
     }
 
     @JavascriptInterface
@@ -317,14 +317,14 @@ class FolioWebView : WebView {
                 UiUtil.copyToClipboard(context, selectedText)
                 Toast.makeText(context, context.getString(R.string.copied), Toast.LENGTH_SHORT).show()
             }
-            R.id.shareSelection -> {
+            /*R.id.shareSelection -> {
                 Log.v(LOG_TAG, "-> onTextSelectionItemClicked -> shareSelection -> $selectedText")
                 UiUtil.share(context, selectedText)
             }
             R.id.defineSelection -> {
                 Log.v(LOG_TAG, "-> onTextSelectionItemClicked -> defineSelection -> $selectedText")
                 uiHandler.post { showDictDialog(selectedText) }
-            }
+            } */
             else -> {
                 Log.w(LOG_TAG, "-> onTextSelectionItemClicked -> unknown id = $id")
             }
