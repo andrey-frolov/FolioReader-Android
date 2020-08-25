@@ -38,7 +38,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:max="4"
-        app:layout_constraintBottom_toTopOf="@+id/view5"
+        app:layout_constraintTop_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/view_config_iv_label_font_big"
         app:layout_constraintStart_toEndOf="@+id/view_config_iv_label_font_small" />
 
