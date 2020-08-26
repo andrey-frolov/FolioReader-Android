@@ -13,7 +13,7 @@ public class FolioDatabaseHelper extends SQLiteOpenHelper {
     private static SQLiteDatabase myWritableDb;
 
     public static final String DATABASE_NAME = "FolioReader.db";
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 4;
 
     public static final String KEY_ID = "_id";
     private final Context mContext;
@@ -69,6 +69,10 @@ public class FolioDatabaseHelper extends SQLiteOpenHelper {
         resetAllPreferences(mContext);
 
         /* PROTECTED REGION END */
+        if (oldVersion < 4) {
+            db.execSQL(HighLightTable.SQL_DROP);
+            db.execSQL(HighLightTable.SQL_CREATE);
+        }
     }
 
     /**
