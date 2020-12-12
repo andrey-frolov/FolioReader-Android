@@ -187,7 +187,7 @@ class FolioPageFragment : Fragment(),
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun pauseButtonClicked(event: MediaOverlayPlayPauseEvent) {
         if (isAdded && spineItem!!.href == event.href) {
-            mediaController!!.stateChanged(event)
+            // FROLOV FIX mediaController!!.stateChanged(event)
         }
     }
 
@@ -201,8 +201,8 @@ class FolioPageFragment : Fragment(),
      */
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun speedChanged(event: MediaOverlaySpeedEvent) {
-        if (mediaController != null)
-            mediaController!!.setSpeed(event.speed)
+        // FROLOV FIX if (mediaController != null)
+        // FROLOV FIX    mediaController!!.setSpeed(event.speed)
     }
 
     /**
@@ -563,7 +563,7 @@ class FolioPageFragment : Fragment(),
                 // to handle TTS playback when highlight is deleted.
                 val p = Pattern.compile("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")
                 if (!p.matcher(message).matches() && message != "undefined" && isCurrentFragment) {
-                    mediaController!!.speakAudio(message)
+                    // FROLOV FIX mediaController!!.speakAudio(message)
                 }
             }
 
@@ -576,7 +576,7 @@ class FolioPageFragment : Fragment(),
         super.onStop()
         Log.v(LOG_TAG, "-> onStop -> " + spineItem.href + " -> " + isCurrentFragment)
 
-        mediaController!!.stop()
+        // FROLOV FIX mediaController!!.stop()
         //TODO save last media overlay item
 
         if (isCurrentFragment)
