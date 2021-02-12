@@ -7,7 +7,7 @@
  */
 
 /* CSS Reset */
-html, body, div, span, applet, object, iframe,
+/* html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -22,13 +22,13 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
     margin: 0;
     vertical-align: baseline;
-}
+} */
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
+/* article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
-}
+} */
 
 /* ePUB */
 html {
@@ -38,35 +38,33 @@ html {
 }
 
 body {
-    margin: 0 !important;
     padding: 20px 20px !important;
+    margin: 0 !important;
     overflow: !important;
 }
 
 /* Custom padding for tablets */
-/*
 @media only screen and (min-device-width: 768px){
     body {
-        padding: 60px 80px !important;
+        padding: 40px 40px !important;
     }
 }
-*/
 
 /* Table */
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+/*     border-collapse: collapse; */
+/*     border-spacing: 0; */
 }
 tbody, tfoot, thead {
-    vertical-align: middle !important;
+/*     vertical-align: middle !important; */
 }
 td, th, tr {
-    vertical-align: inherit !important;
+/*     vertical-align: inherit !important; */
 }
 
 /* List */
-dd, dir, menu, ol, ul { margin-left: 30px !important; }
-ol { list-style-type: decimal !important; }
+/* dd, dir, menu, ol, ul { margin-left: 30px !important; } */
+/* ol { list-style-type: decimal !important; } */
 li { display: list-item !important; }
 ol ol, ol ul, ul ol, ul ul {
     margin-bottom: 0 !important;
@@ -77,12 +75,7 @@ ol ol, ol ul, ul ol, ul ul {
 a { -webkit-touch-callout: none; } /* Disable link callback */
 * { -webkit-user-select: text; }
 img { -webkit-user-select: none; }
-p {
-    margin: 1.3em 0 1.5em 0;
-    line-height: 1.40em !important;
-    text-indent: 1.25em;
-}
-b, strong, th {font-weight: bolder !important;}
+/* b, strong, th {font-weight: bolder !important;} */
 
 /* Forced font overrides */
 code, kbd, pre, samp, tt {
@@ -92,38 +85,22 @@ code, kbd, pre, samp, tt {
 button, input, select, textarea { display: inline-block !important; }
 /*h1, h2, h3, h4, h5, h6 { font-weight: 400!important; }*/
 del, s, strike { text-decoration: line-through!important; }
-hr {
-    background-color: rgba(0,0,0,.1) !important;
-    border: none !important;
-    height: 1px !important;
-}
-
-
-/* Sub and Super */
-big { font-size: 1.15rem !important; }
-small, sub, sup { font-size: .65rem !important; }
-sub { vertical-align: sub !important; }
-sup {
-    font-family: monospace !important;
-    vertical-align: super !important;
-}
-
 
 /* iBooks like */
-a { text-decoration: none; }
-pre { white-space: pre-wrap; }
-@page { margin: 0 0 !important; }
-table, ol, il { text-align: -webkit-auto; }
+/* a { text-decoration: none; } */
+/* pre { white-space: pre-wrap; } */
+/* @page { margin: 0 0 !important; } */
+/* table, ol, il { text-align: -webkit-auto; } */
 h1 ,h2 ,h3 ,h4 ,h5 ,h6 {
-    text-align: -webkit-auto;
-    text-rendering: optimizelegibility;
+/*     text-align: -webkit-auto; */
+/*     text-rendering: optimizelegibility; */
 }
 
 /* allow breaking of words on headers and anchors as they tend to be larger font size or contain longer words */
 a, h1, h2, h3, h4, h5, h6 {
-    word-break: break-word !important;
-    -webkit-hyphens: none !important;
-    hyphens: none !important;
+/*     word-break: break-word !important; */
+/*     -webkit-hyphens: none !important; */
+/*     hyphens: none !important; */
 }
 
 /* Begin Ted */
@@ -229,44 +206,121 @@ html.nightMode .highlight_underline {border-bottom: 2px solid rgba(240, 40, 20, 
  *
  */
 
-@font-face {
-    font-family: 'andada';
-    src: url('file:///android_asset/fonts/andada/Andada-Regular.otf');
+html.textSizeOne {
+	font-size: 13px !important;
+	line-height: 1.4 !important;
+}
+html.textSizeTwo {
+	font-size: 15px !important;
+	line-height: 1.4 !important;
+}
+html.textSizeThree {
+	font-size: 17px !important;
+	line-height: 1.4 !important;
+}
+html.textSizeFour {
+	font-size: 19px !important;
+	line-height: 1.4 !important;
+}
+html.textSizeFive {
+	font-size: 22px !important;
+	line-height: 1.4 !important;
 }
 
-@font-face {
-    font-family: 'lato';
-    src: url('file:///android_asset/fonts/lato/Lato-Regular.ttf');
+@media screen and (min-width: 568px) {
+	html.textSizeOne {
+		font-size: 14px !important;
+	}
+	html.textSizeTwo {
+		font-size: 16px !important;
+	}
+	html.textSizeThree {
+		font-size: 18px !important;
+	}
+	html.textSizeFour {
+		font-size: 20px !important;
+	}
+	html.textSizeFive {
+		font-size: 23px !important;
+	}
 }
 
-@font-face {
-    font-family: 'lora';
-    src: url('file:///android_asset/fonts/lora/Lora-Regular.ttf');
+@media screen and (min-width: 1024px) {
+	html.textSizeOne {
+		font-size: 16px !important;
+    line-height: 1.25 !important;
+	}
+	html.textSizeTwo {
+		font-size: 20px !important;
+    line-height: 1.25 !important;
+	}
+	html.textSizeThree {
+		font-size: 24px !important;
+    line-height: 1.25 !important;
+	}
+	html.textSizeFour {
+		font-size: 28px !important;
+    line-height: 1.25 !important;
+	}
+	html.textSizeFive {
+		font-size: 33px !important;
+    line-height: 1.25 !important;
+	}
 }
 
-@font-face {
-    font-family: 'raleway';
-    src: url('file:///android_asset/fonts/raleway/Raleway-Regular.ttf');
+@media screen and (min-width: 1920px) {
+	html.textSizeOne {
+		font-size: 21px !important;
+	}
+	html.textSizeTwo {
+		font-size: 26px !important;
+	}
+	html.textSizeThree {
+		font-size: 30px !important;
+	}
+	html.textSizeFour {
+		font-size: 36px !important;
+	}
+	html.textSizeFive {
+		font-size: 44px !important;
+	}
 }
 
-.andada {
-     font-family: "andada", sans-serif;
- }
-.lato {
-     font-family: "lato", serif;
- }
-.lora {
-     font-family: "lora", serif;
- }
-.raleway {
-     font-family: "raleway", sans-serif;
- }
+@media screen and (min-width: 2560px) {
+	html.textSizeOne {
+		font-size: 29px !important;
+	}
+	html.textSizeTwo {
+		font-size: 35px !important;
+	}
+	html.textSizeThree {
+		font-size: 40px !important;
+	}
+	html.textSizeFour {
+		font-size: 47px !important;
+	}
+	html.textSizeFive {
+		font-size: 58px !important;
+	}
+}
 
-html.textSizeOne { font-size: 13px !important; }
-html.textSizeTwo { font-size: 15px !important; }
-html.textSizeThree { font-size: 17px !important; }
-html.textSizeFour { font-size: 19px !important; }
-html.textSizeFive { font-size: 21px !important; }
+@media screen and (min-width: 3840px) {
+	html.textSizeOne {
+		font-size: 40px !important;
+	}
+	html.textSizeTwo {
+		font-size: 50px !important;
+	}
+	html.textSizeThree {
+		font-size: 60px !important;
+	}
+	html.textSizeFour {
+		font-size: 75px !important;
+	}
+	html.textSizeFive {
+		font-size: 90px !important;
+	}
+}
 
 h1 {
     font-size: 2rem;
@@ -297,14 +351,7 @@ body {
     -webkit-hyphens: auto !important;
     hyphens: auto !important;
 }
-p, span, div {
-    line-height: 1.5 !important;
-}
 @media only screen and (min-device-width: 600px) {
-    div {
-        font-size: 1rem;
-        line-height: 1.438em !important;
-    }
     body {
         -webkit-hyphens: none !important;
         hyphens: none !important;
